@@ -1,0 +1,358 @@
+
+/*==== GENERALES ====*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif; /*Fuente*/
+}
+
+/*==== HEADER ====*/
+.container_principalHeader{
+  width: 100vw;
+  height: 8vh;
+  background-color: rgb(16, 32, 175);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container_contentHeader{
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
+
+.headerSearch {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vh;
+}
+
+.inputHeader{
+  border-radius: .4rem;
+  border: none;
+  padding: .4rem;
+  outline: none;
+  font-size: 1.7vh;
+  height: 2vh;
+  width: 20vw;
+}
+
+.buttonSearch {
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: .4rem;
+  padding: .4rem;
+  width: 10vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease;
+}
+
+.buttonSearch:hover {
+  cursor: pointer;
+  background-color: #4878bb;
+  transition: .2s ease;
+}
+
+.header_buttonAdd {
+  width: 20vw;
+  padding: .4rem;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  border-radius: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease;
+}
+
+.header_buttonAdd:hover {
+  cursor: pointer;
+  background-color: #4a6994;
+  transition: .2s ease;
+}
+
+
+/*==== MAIN ====*/
+.container_view {
+  display: grid;
+  grid-template-columns: .2fr .8fr;
+}
+
+.listAside {
+  height: 92vh;
+}
+
+/*==== STORE ====*/
+.store {
+  max-height: 92vh;
+  overflow-y: auto;
+  background-color: #eeee;
+  width: 100%;
+
+}
+
+.sectionStore {
+  background-color: #fff;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.containerTitleSelection {
+  margin: 1rem;
+  font-size: 3vh;
+  border-bottom: 1px solid grey;
+}
+
+.containerProductStore {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, .6fr);
+  gap: 2vh;
+}
+
+.containerTargetItem {
+  width: 20vw;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: .4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: .4rem;
+  transition: .2s ease;
+}
+
+.containerTargetItem:hover {
+  transform: scale(1.1);
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.containerTargetItem h2 {
+  font-size: 2vh;
+  text-align: center;
+}
+
+.targetProps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionStore img {
+  height: 20vh;
+  width: 10vw;
+  border-radius: .4rem;
+  max-width: 10vw; /* Opción para limitar el ancho máximo */
+  object-fit: contain; /* Ajusta la imagen sin deformarla */
+}
+
+
+
+/*==== LISTASIDE ====*/
+.listAside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listAside h2 {
+  display: flex;
+  font-size: 3vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.listAside ul {
+  margin-top: 3vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 1vh;
+}
+
+.listAside ul li {
+  font-size: 2vh;
+  font-weight: 500;
+  padding: .4rem;
+  border-radius: .4rem;
+}
+
+.listAside ul li:hover {
+  cursor: pointer;
+  background-color: #4d6994;
+  transition: .2s ease;
+  color: white;
+}
+
+.liActive {
+  background-color: #1f4886;
+  color: white;
+}
+
+/*POPUP*/
+.popUpContainer_principal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.popUpContainer {
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  box-shadow: 5px 2px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: .4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.containerTitlePopUp {
+  width: 100%;
+  text-align: center;
+}
+
+.containerInputs_popUP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.containerInputs_popUP input,
+.containerInputs_popUP select {
+  width: 60%;
+  border: 1px solid gray;
+  padding: .4rem;
+  border-radius: .4rem;
+}
+
+.containerButtonsPopUp {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonPopUP {
+  font-size: 2vh;
+  padding: .6rem;
+  border: none;
+  border-radius: .4rem;
+}
+
+.buttonPopUP:hover {
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: rgb(224, 224, 35);
+}
+
+.accept {
+  background-color: rgb(49, 192, 36);
+}
+
+.delete {
+  background-color: rgb(212, 18, 18);
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 990px) {
+  .containerProductStore {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px; /* Espacio entre cards */
+  }
+
+  .containerTargetItem {
+    width: 20vw;
+    max-width: 250px;
+  }
+
+  .containerTargetItem img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 989px) and (min-width: 600px) {
+  .containerProductStore {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 15px;
+  }
+
+  .containerTargetItem {
+    width: 45vw;
+  }
+
+  .containerTargetItem img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .containerProductStore {
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 15px;
+  }
+
+  .containerTargetItem {
+    width: 90%; /* Ocupa casi toda la pantalla */
+    margin: 0 auto; /* Centra la card */
+  }
+
+  .containerTargetItem img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Limita la altura máxima para evitar que la imagen se agrande demasiado */
+    object-fit: contain; /* Ajusta la imagen sin distorsión */
+  }
+}
+
+
+ /* SCROLLBAR */
+::-webkit-scrollbar {
+  width: .7rem;
+  background-color: #fff;
+  border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e3f72;
+  border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4f627e;
+  border-radius: .4rem;
+}
+
+
